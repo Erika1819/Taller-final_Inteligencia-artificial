@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="atm-container">
+        <h1>Cajero Automático</h1>
+
+        <div id="login-section">
+            <p>Ingrese su número de usuario:</p>
+            <input type="text" id="userId" placeholder="Número de usuario">
+            <button onclick="validateUser()">Validar Usuario</button>
+        </div>
+
+        <div id="atm-section" style="display: none;">
+            <h2>Bienvenido, Usuario <span id="user"></span></h2>
+            <p>Saldo Actual: $<span id="balance">0</span></p>
+
+            <div class="operations">
+                <button id="consultar-btn">Consultar Saldo</button>
+                <button id="retirar-btn">Retirar</button>
+                <button id="consignar-btn">Consignar</button>
+                <button id="salir-btn">Salir</button> <!-- Botón de despedida -->
+            </div>
+
+            <div id="operation-result"></div>
+        </div>
+
+        <div id="goodbye-section" style="display: none;">
+            <h2>Gracias por usar nuestro servicio. ¡Hasta pronto!</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
